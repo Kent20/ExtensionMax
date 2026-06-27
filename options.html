@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>MAX Indexer — настройки</title>
+<style>
+  body { font-family: system-ui, sans-serif; padding: 16px; max-width: 560px; color: #111; }
+  button { background: #2563eb; color: #fff; border: none; border-radius: 6px; padding: 8px 14px; cursor: pointer; margin-right: 8px; }
+  button.secondary { background: #6b7280; }
+  h1 { font-size: 16px; }
+  p { font-size: 13px; line-height: 1.5; color: #374151; }
+  #stats { font-size: 13px; color: #111; margin: 12px 0; }
+</style>
+</head>
+<body>
+  <h1>MAX Chat Indexer — настройки</h1>
+  <p>Индексация полностью автоматическая: открой любой чат в <b>web.max.ru</b> и расширение само соберёт историю в фоне. Иконка поиска появляется в правом нижнем углу страницы.</p>
+  <div id="stats">—</div>
+  <button id="exportData" class="secondary">Экспортировать в JSON</button>
+  <button id="importData" class="secondary">Импортировать из JSON</button>
+  <input id="importFile" type="file" accept="application/json" style="display:none" />
+  <button id="clearData">Удалить весь собранный индекс</button>
+  <p style="margin-top:14px;">Экспорт сохраняет весь собранный индекс (сообщения и чаты) в один файл. Импорт на другом устройстве/профиле добавляет эти данные к уже существующему индексу (дублей не будет — сообщения совпадают по id).</p>
+  <div id="status" style="margin-top:10px;font-size:12px;color:#16a34a;"></div>
+  <script src="db.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

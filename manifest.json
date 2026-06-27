@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "MAX Chat Indexer",
+  "version": "0.1.0",
+  "description": "Локальная индексация и полнотекстовый поиск по сообщениям web.max.ru",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://web.max.ru/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Поиск по MAX"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://web.max.ru/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

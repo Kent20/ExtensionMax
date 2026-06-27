@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Поиск по MAX</title>
+<style>
+  body { font-family: system-ui, sans-serif; width: 380px; margin: 0; color: #111; }
+  header { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; }
+  #q { width: 100%; box-sizing: border-box; padding: 8px 10px; font-size: 14px; border: 1px solid #d1d5db; border-radius: 6px; }
+  #meta { font-size: 11px; color: #6b7280; margin-top: 4px; }
+  #results { max-height: 420px; overflow-y: auto; }
+  .item { padding: 8px 12px; border-bottom: 1px solid #f3f4f6; cursor: default; }
+  .item .chat { font-size: 11px; color: #2563eb; font-weight: 600; }
+  .item .meta { font-size: 11px; color: #6b7280; }
+  .item .text { font-size: 13px; margin-top: 2px; white-space: pre-wrap; }
+  mark { background: #fde68a; }
+  .empty { padding: 20px; text-align: center; color: #9ca3af; font-size: 13px; }
+</style>
+</head>
+<body>
+  <header>
+    <input id="q" type="text" placeholder="Поиск по всем проиндексированным сообщениям..." autofocus />
+    <div id="meta">—</div>
+  </header>
+  <div id="results"><div class="empty">Начни вводить запрос</div></div>
+  <script src="db.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
